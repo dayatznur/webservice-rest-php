@@ -1,0 +1,30 @@
+{
+    "name": "francisdesjardins/webservice-rest-php",
+    "description": "A simple REST helper for Fat-Free-Framework",
+    "license": "MIT",
+    "keywords": ["webservice", "rest", "Fat-Free-Framework", "F3"],
+    "authors": [
+        {
+            "name": "Francis Desjardins",
+            "email": "me@francisdesjardins.ca"
+        }
+    ],
+    "require": {
+        "bcosca/fatfree-core": "dev-master",
+        "league/oauth2-server": "dev-master",
+        "league/event": "2.2.*@dev",
+        "myclabs/php-enum": "1.2.*",
+        "psr/log": "1.0.*@dev"
+	},
+    "require-dev": {
+        "phpmd/phpmd": "@stable",
+        "phpunit/phpunit": "4.4.*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FrancisDesjardins\\WebService\\Rest\\": "src",
+            "FrancisDesjardins\\WebService\\Rest\\Test\\": "tests/www/src"
+        }
+    }
+}
