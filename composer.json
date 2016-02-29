@@ -10,11 +10,11 @@
         }
     ],
     "require": {
-        "bcosca/fatfree-core": "dev-master",
-        "league/oauth2-server": "dev-master",
-        "league/event": "2.2.*@dev",
-        "myclabs/php-enum": "1.2.*",
-        "psr/log": "1.0.*@dev"
+        "bcosca/fatfree-core": "3.5.1",
+        "league/oauth2-server": "4.1.5",
+        "league/event": "2.1.2",
+        "myclabs/php-enum": "1.4.1",
+        "psr/log": "1.0.0"
 	},
     "require-dev": {
         "phpmd/phpmd": "@stable",
