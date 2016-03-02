@@ -134,9 +134,6 @@ abstract class AbstractRest implements RestInterface
                 //! we set the rest serializable object to the responder
                 $responder->setData($data);
 
-                //! we process the mapping against the given storage
-                $responder->chew();
-
                 //! we flush output buffer; prevents messy outputs
                 //! runs only in production environment which is defined
                 //! by FatFreeFramework 'DEBUG' configuration property

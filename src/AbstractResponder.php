@@ -31,15 +31,6 @@ abstract class AbstractResponder implements ResponderInterface
 
     private $encoder;
 
-    final public function chew()
-    {
-        $data = $this->getData();
-
-        if (!is_null($data)) {
-            //$model->chew();
-        }
-    }
-
     /**
      * Outputs the response
      *
