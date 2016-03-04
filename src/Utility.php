@@ -92,6 +92,11 @@ class Utility extends Prefab
         return json_encode($value);
     }
 
+    public function jsonDecode($json)
+    {
+        return json_decode($json);
+    }
+
     public function encoding()
     {
         $fff = self::fff();
