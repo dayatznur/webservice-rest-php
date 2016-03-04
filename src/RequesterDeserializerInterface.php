@@ -31,4 +31,6 @@ interface RequesterDeserializerInterface
      * @return mixed|false
      */
     public function deserialize();
+
+    public function decode($data);
 }

@@ -32,8 +32,8 @@ class JsonRequesterDeserializer extends AbstractRequesterDeserializer
     /**
      * @inheritDoc
      */
-    public function deserialize($data)
+    public function decode($data)
     {
-        return self::utility()->jsonEncode(self::utility()->convertUnicodeToUTF8($data));
+        return self::utility()->jsonDecode(self::utility()->convertUnicodeToUTF8($data));
     }
 }

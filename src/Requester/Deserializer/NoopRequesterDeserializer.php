@@ -32,7 +32,7 @@ class NoopRequesterDeserializer extends AbstractRequesterDeserializer
     /**
      * @inheritDoc
      */
-    public function deserialize($data)
+    public function decode($data)
     {
         return $data;
     }

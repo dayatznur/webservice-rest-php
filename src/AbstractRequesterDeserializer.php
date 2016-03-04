@@ -31,6 +31,7 @@ abstract class AbstractRequesterDeserializer implements RequesterDeserializerInt
     use SystemEventEmitterTrait;
     use UtilityTrait;
 
+    /** @var RequesterDeserializerInterface[] */
     private static $deserializer = [];
     private static $data = null;
 
@@ -39,14 +40,17 @@ abstract class AbstractRequesterDeserializer implements RequesterDeserializerInt
         array_push(self::$deserializer, $deserializer);
     }
 
-    public function deserialize()
+    final public function deserialize()
     {
         $data = self::$data;
 
         array_map(function($deserializer) use (&$data) {
+            /* @var $deserializer RequesterDeserializerInterface */
             $data = $deserializer->decode($data);
-        });
+        }, self::$deserializer);
 
         return $data;
     }
+
+    abstract public function decode($data);
 }
