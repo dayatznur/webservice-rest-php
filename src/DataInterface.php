@@ -66,13 +66,6 @@ interface DataInterface
     public function merge(DataInterface $guest, $overwrite = false);
 
     /**
-     * Mutates the host into something else...
-     * @param DataTransformerInterface $transformer
-     * @return mixed
-     */
-    public function transform(DataTransformerInterface $transformer);
-
-    /**
      * Returns what should be serialize for the request
      * @return mixed
      */

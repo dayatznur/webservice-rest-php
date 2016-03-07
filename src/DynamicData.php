@@ -86,16 +86,6 @@ class DynamicData implements DataInterface
     }
 
     /**
-     * Mutates the host into something else...
-     * @param DataTransformerInterface $transformer
-     * @return mixed
-     */
-    public function transform(DataTransformerInterface $transformer)
-    {
-        return $transformer->transform($this);
-    }
-
-    /**
      * @return array
      */
     final public function serialize()
