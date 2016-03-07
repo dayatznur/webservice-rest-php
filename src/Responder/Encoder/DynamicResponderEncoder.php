@@ -56,7 +56,13 @@ class DynamicResponderEncoder extends AbstractResponderEncoder
         }
 
         if (!$this->encoder) {
-            $this->encoder = self::getDefaultEncoder();
+            $defaultEncoder = self::getDefaultEncoder();
+
+            if (!($defaultEncoder instanceof self)) {
+                $this->encoder = $defaultEncoder;
+            } else {
+                $this->encoder = new NoopResponderEncoder();
+            }
         }
 
         return $this->encoder->encode($data);
