@@ -65,7 +65,6 @@ use FrancisDesjardins\WebService\Rest\Responder\Encoder\GzipResponderEncoder;
 use FrancisDesjardins\WebService\Rest\Responder\JSONResponderTrait;
 use FrancisDesjardins\WebService\Rest\Security;
 use FrancisDesjardins\WebService\Rest\SecurityRule\LocalhostSecurityRule;
-use FrancisDesjardins\WebService\Rest\SystemEventEmitterTrait;
 use FrancisDesjardins\WebService\Rest\UtilityTrait;
 
 class Example extends AbstractRest
@@ -73,7 +72,6 @@ class Example extends AbstractRest
     use AuditTrait;
     use FatFreeFrameworkTrait;
     use JSONResponderTrait; // every VERB respond as application/json
-    use SystemEventEmitterTrait;
     use UtilityTrait;
 
     // do something before routing
