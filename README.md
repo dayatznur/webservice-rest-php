@@ -4,7 +4,7 @@ A simple REST helper for Fat-Free-Framework
 
 ## WIP
 
-Nothing much to say here ... it is a work-in-process ... you will have to figure out how to use it ...
+Nothing much to say here ... it is a work-in-process ... you will have to figure out how to use it ... but do not worry friends, I will shortly commit a functional example with some mapping examples and which custom options can be set (just let me clean-up the examples and fix some Windows case-insensitive problems)
 
 ## quick and dirty example
 
