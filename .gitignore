@@ -1,5 +1,8 @@
-/tests/www
+/tests/www/.cache
+/tests/www/.logs
+/tests/www/src/Protocol
 /vendor
+
 composer.lock
 composer.phar
 
