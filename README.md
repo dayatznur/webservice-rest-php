@@ -4,7 +4,7 @@ A simple REST helper for Fat-Free-Framework
 
 ## WIP
 
-Nothing much to say here ... it is a work-in-process ... you will have to figure out how to use it ... but do not worry friends, there are some examples to help you with that in [https://github.com/francisdesjardins/webservice-rest-php/tree/master/tests/www](tests).
+Nothing much to say here ... it is a work-in-process ... you will have to figure out how to use it ... but do not worry friends, there are some examples to help you with that in [tests](https://github.com/francisdesjardins/webservice-rest-php/tree/master/tests/www).
 
 ## quick and dirty example
 
