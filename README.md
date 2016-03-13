@@ -4,7 +4,7 @@ A simple REST helper for Fat-Free-Framework
 
 ## WIP
 
-Nothing much to say here ... it is a work-in-process ... you will have to figure out how to use it ... but do not worry friends, I will shortly commit a functional example with some mapping examples and which custom options can be set (just let me clean-up the examples and fix some Windows case-insensitive problems)
+Nothing much to say here ... it is a work-in-process ... you will have to figure out how to use it ... but do not worry friends, there are some examples to help you with that in [https://github.com/francisdesjardins/webservice-rest-php/tree/master/tests/www](tests).
 
 ## quick and dirty example
 
@@ -21,21 +21,23 @@ use FrancisDesjardins\WebService\Rest\Utility;
 /** @var Base $fw */
 $fw = Base::instance();
 
-//! Load the project's globals
+//! load globals
 $fw->config('../app/globals.ini');
 
+//! load globals (OS specific)
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
     $fw->config('../app/globals.windows.ini');
 } else {
     $fw->config('../app/globals.linux.ini');
 }
 
-//! Load the project's custom sections
+//! load custom sections
 $fw->config('../app/custom.ini');
 
-//! Load the project's mapping
+//! load mappings
 $fw->config('../app/maps.ini');
 
+//! global error handler
 if (!Utility::instance()->debug()) {
     $fw->set('ONERROR', function (Base $fw) {
         Utility::instance()->flushOutputBuffer();
@@ -46,7 +48,7 @@ if (!Utility::instance()->debug()) {
     });
 }
 
-//! Run da shit!
+//! run it!
 $fw->run();
 ```
 
@@ -65,6 +67,7 @@ use FrancisDesjardins\WebService\Rest\Responder\Encoder\GzipResponderEncoder;
 use FrancisDesjardins\WebService\Rest\Responder\JSONResponderTrait;
 use FrancisDesjardins\WebService\Rest\Security;
 use FrancisDesjardins\WebService\Rest\SecurityRule\LocalhostSecurityRule;
+use FrancisDesjardins\WebService\Rest\Test\Models\Result\Ok;
 use FrancisDesjardins\WebService\Rest\UtilityTrait;
 
 class Example extends AbstractRest
@@ -90,7 +93,7 @@ class Example extends AbstractRest
     // do something on 'GET'
     public function get() {
         // and reply
-        $this->setData(new DynamicData(['result' => 'ok']));
+        $this->setData(new DynamicData(['property1' => 'value1']));
     }
 
     // do something on 'POST'
@@ -103,7 +106,7 @@ class Example extends AbstractRest
         }
 
         // and reply
-        $this->setData(new DynamicData(['result' => 'ok']));
+        $this->setData(new Ok());
     }
 
     // do something after routing
