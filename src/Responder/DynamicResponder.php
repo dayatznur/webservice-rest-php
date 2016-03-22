@@ -26,12 +26,16 @@
 namespace FrancisDesjardins\WebService\Rest\Responder;
 
 use FrancisDesjardins\WebService\Rest\AbstractResponder;
+use FrancisDesjardins\WebService\Rest\ResponderInterface;
 use Web;
 
 class DynamicResponder extends AbstractResponder
 {
     /** @var false|string  */
     protected $acceptable;
+
+    /** @var ResponderInterface  */
+    private $responder;
 
     public function __construct()
     {
